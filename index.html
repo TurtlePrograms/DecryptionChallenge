@@ -60,10 +60,10 @@
     <div class="feedback" id="feedback"></div>
 
     <script>
-        const correctHash = "ad0bde3342b859b4c271404f42e86e06a53c9a27c2f847a8dcb49c9593421363";
+        const correctHash = "378956b4887e131aeeaae1fdffa7bc2405d402a41a54f872b40b9972ec1d723d";
 
         const getSHA256Hash = async (input) => {
-            input = "chaos:" + input + input.length
+            input = "chaosV2:" + input + input.length
             const textAsBuffer = new TextEncoder().encode(input);
             const hashBuffer = await window.crypto.subtle.digest("SHA-256", textAsBuffer);
             const hashArray = Array.from(new Uint8Array(hashBuffer));
